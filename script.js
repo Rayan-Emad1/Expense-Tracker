@@ -1,6 +1,6 @@
 
 let add = document.getElementById('add');
-let tableBody = document.getElementsByTagName('tbody')[0];
+let tableBody = document.querySelector('tbody');
 let del = document.getElementsByClassName('delete');
 
 function createRowElement(name,amount) {
@@ -18,11 +18,14 @@ add.addEventListener('click', function(e) {
     let expenseA = document.getElementById('expense-amount').value;
     if(expenseA<=0){
         alert('Please Enter a valid number bigger than zero')
+        document.getElementById('expense-amount').value = '';
     }
     else{
         expenseN = expenseN?expenseN:'Unknown'
+
         let newRow = tableBody.insertRow();
         newRow.innerHTML = createRowElement(expenseN, expenseA);
+
         updateTotal();
         document.getElementById('expense-name').value = '';
         document.getElementById('expense-amount').value = '';
