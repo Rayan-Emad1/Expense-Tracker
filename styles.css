@@ -31,9 +31,15 @@ input[type="submit"] {
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin: 20px 70px;
+}
+
+tr{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
 }
 
 th, td {
