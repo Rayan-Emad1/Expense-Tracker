@@ -3,11 +3,11 @@ let add = $('#add');
 let tableBody = $('tbody');
 
 function createRowElement(name, amount) {
-    return `<tr>
+    return `
     <td class='name'>${name}</td>
     <td class='amount'>${amount}</td>
     <td><button class='delete-button'>Delete Item</button></td>
-    </tr>`;
+    `;
 }
 
 add.click(function(e) {
