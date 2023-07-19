@@ -17,18 +17,16 @@ add.click(function(e) {
     let expenseA = $('#expense-amount').val();
 
     if (expenseA <= 0) {
-    alert('Please enter a valid number bigger than zero');
-    $('#expense-amount').val('');
+        alert('Please enter a valid number bigger than zero');
+        $('#expense-amount').val('');
     } 
     else {
-    expenseN = expenseN ? expenseN : 'Unknown';
-
-    let newRow = $('<tr>').html(createRowElement(expenseN, expenseA));
-    tableBody.append(newRow);
-
-    updateTotal();
-    $('#expense-name').val('');
-    $('#expense-amount').val('');
+        expenseN = expenseN ? expenseN : 'Unknown';
+        let newRow = $('<tr>').html(createRowElement(expenseN, expenseA));
+        tableBody.append(newRow);
+        updateTotal();
+        $('#expense-name').val('');
+        $('#expense-amount').val('');
     }
 });
 
